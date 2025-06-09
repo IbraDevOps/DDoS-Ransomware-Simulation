@@ -1,32 +1,19 @@
-# DDoS-Ransomware-Simulation
-This project simulates a basic DDoS attack and ransomware scenario using two Linux virtual machines.
-#  DDoS and Ransomware Simulation Lab
+ DDoS & Ransomware Simulation Lab
 
+This project simulates a basic DDoS attack and ransomware encryption scenario using two Kali Linux VMs in a bridged network setup.
 
-- **Attacker VM:** 192.168.56.103
-- **Victim VM:** 192.168.56.102
+ Network Setup
+- Attacker VM: 192.168.1.30 (Kali)
+- Victim VM: 192.168.1.33 
 
-##  Communication
-Ping test successful – VMs can reach each other via the host-only adapter.
+VMs are connected via VirtualBox bridged networking. Ping tests confirm stable communication.
 
-##  Objectives
-- Simulate a basic DDoS attack using `hping3`
-- Simulate ransomware behavior using `gpg` to encrypt files
-- Decrypt the files as if "ransom" was paid
+ Simulation Phases
+1. DDoS Attack using `hping3` from attacker to victim.
+2. Ransomware Simulation by encrypting files with GPG on victim machine.
+3. Decryption Process simulating ransom payment.
 
-##  Tools
-- Kali Linux (both attacker & victim)
-- hping3 (for DDoS)
-- gpg (for encryption/decryption)
-- bash scripts
-
-##  Status
-- [x] VM Setup
-- [x] Network Configuration (Ping OK)
-- [ ] DDoS Attack Simulation
-- [ ] Ransomware Encryption
-- [ ] Decryption Simulation
-- [ ] Final Documentation & Demo
-
-##  Next Step
-Begin DDoS attack from attacker Kali (192.168.56.103) to victim Kali (192.168.56.102).
+ Tools
+- `hping3` – DDoS traffic simulation
+- `gpg` – File encryption/decryption
+- `bash` – Automation scripts
