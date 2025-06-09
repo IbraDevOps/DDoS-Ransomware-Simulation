@@ -1,15 +1,15 @@
 PHP Reverse Shell ()
-🔹 Purpose
+ 
 Simulated remote access by deploying a PHP reverse shell from the attacker (192.168.1.30) to the victim (192.168.1.33).
 
-🔹 Why PHP?
+ Why PHP?
 Widely used on web servers
 
 Easy to deploy via file upload or injection
 
 Simulates real-world web-based exploits
 
-🔹 Steps
+ Steps
 Start listener (attacker):
 
 bash
