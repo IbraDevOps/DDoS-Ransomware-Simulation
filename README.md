@@ -2,7 +2,7 @@ DDoS & Ransomware Simulation Lab
 
 This project demonstrates a simulated multi-stage cyberattack in a controlled virtual lab environment using Kali Linux and Ubuntu 17.10. It includes:
 
-DDoS Attacks** using tools like `ping`, `hping3`, and `nping`
+DDoS Attacks using tools like `ping`, `hping3`, and `nping`
 Reverse Shell Access via Python script
 Privilege Escalation Attempts using real kernel exploits (e.g., CVE-2017-5123)
 Simulated Ransomware Behavior through GPG encryption and ransom notes
