@@ -1,19 +1,39 @@
- DDoS & Ransomware Simulation Lab
+DDoS & Ransomware Simulation Lab
 
-This project simulates a basic DDoS attack and ransomware encryption scenario using two Kali Linux VMs in a bridged network setup.
+This project demonstrates a simulated multi-stage cyberattack in a controlled virtual lab environment using Kali Linux and Ubuntu 17.10. It includes:
 
- Network Setup
-- Attacker VM: 192.168.1.30 (Kali)
-- Victim VM: 192.168.1.33 
+DDoS Attacks** using tools like `ping`, `hping3`, and `nping`
+Reverse Shell Access via Python script
+Privilege Escalation Attempts using real kernel exploits (e.g., CVE-2017-5123)
+Simulated Ransomware Behavior through GPG encryption and ransom notes
 
-VMs are connected via VirtualBox bridged networking. Ping tests confirm stable communication.
+The objective is to understand how adversaries operate step-by-step — from initial access to impact — and to build awareness for blue teamers, students, and security professionals.
 
- Simulation Phases
-1. DDoS Attack using `hping3` from attacker to victim.
-2. Ransomware Simulation by encrypting files with GPG on victim machine.
-3. Decryption Process simulating ransom payment.
+ Full walkthrough with screenshots, commands, and analysis available on Medium:
+ [Read the article here](https://medium.com/p/10f7406cd668/edit)
 
- Tools
-- `hping3` – DDoS traffic simulation
-- `gpg` – File encryption/decryption
-- `bash` – Automation scripts
+
+
+ Lab Setup
+
+Attacker VM: Kali Linux (192.168.1.30)
+Victim VM: Ubuntu 17.10 (192.168.1.33)
+Environment: VirtualBox with bridged networking
+
+ Tools Used
+
+ `hping3`, `nping` – traffic generation
+ `python3`, `netcat` – shell interaction
+ `gpg` – encryption
+ `gcc` – exploit compilation
+
+ Repo Contents
+
+ `ransomware.md` – GPG encryption & ransom note simulation
+ `PHP_reverse_shell` – Alt reverse shell
+ `dirty.c`, `dirtycow.c` – Privilege escalation test code
+ `Documentation.MD` – Full walkthrough steps
+
+
+
+⚠️ Educational use only. Do not replicate outside of an isolated lab you own or control.
